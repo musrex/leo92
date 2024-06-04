@@ -10,18 +10,27 @@
 
 <body>
         <header>
-            <hgroup><h1><a href="/">Leo92.net</a></h1></hgroup>
             <div id="masthead">
-                <p>Hi! I'm Leandro Lopez,</p>
+            <hgroup>
+                <h1><a href="/">Leo92.net</a></h1>                <p>Hi! I'm Leandro Lopez,</p>
                 <p>a software developer, artist, </p>
                 <p>and on ocassion I like to write poetry.</p>
                 <p>Really, I'd say I just love creating things.    </p>
+            </hgroup>
+
+            <button id="hamburger-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+            </button>
             </div>
-                <nav>
-                <ul>
-                            <li><a href="/pages/About.html" >About Leandro Lopez</a></li>
-                            <li><a href="/category/art.html" >art</a></li>
-                    </ul>
+                <nav id="nav-bar">
+                    <button id="nav-bar__close">X</button>
+                    <ul>
+                                <li><a href="/pages/About.html" >About Leandro Lopez</a></li>
+                                <li><a href="/category/art.html" >art</a></li>
+                                <li><a href="/category/code.html" >code</a></li>
+                        </ul>
                 </nav>
         </header>
         
@@ -29,11 +38,25 @@
 <h2>All articles</h2>
 
 
-        <article>
+        <article class="article-card">
+                <h2><a href="/css-full-width-image.html" rel="bookmark" title="Permalink to CSS Full Width Image">CSS Full Width Image</a></h2>
+                <section><p>The point of this blog is to log my developer journey - what I'm learning, 
+the struggles I encounter, the surprises I encounter. It shouldn't come as 
+a suprise then, that during the development of this blog I ran into a few 
+frustrations.  </p>
+<p>On of the things that I knew, stylistically …</p></section>
+                <div class="post-meta">
+                    <p><time datetime="2010-06-04T11:41:00-04:00"> Fri 04 June 2010 </time></p>
+                    <address>By
+                        <a href="/author/leandro-lopez.html">Leandro Lopez</a>
+                    </address>
+                </div>
+        </article>
+        <article class="article-card">
                 <h2><a href="/teacher-grading-painting.html" rel="bookmark" title="Permalink to Painting of Teacher Grading">Painting of Teacher Grading</a></h2>
-                <section><p>A painting of a teacher grading.</p></section>
-                <div class="post-meta"
-                    <p>Published: <time datetime="2010-05-31T10:26:00-04:00"> Mon 31 May 2010 </time></p>
+                <section><p><img alt="Painting of a teacher grading on a laptop. She's laying on her belly, on a bed" src="/images/cordeliagrading.png"></p></section>
+                <div class="post-meta">
+                    <p><time datetime="2010-05-31T10:26:00-04:00"> Mon 31 May 2010 </time></p>
                     <address>By
                         <a href="/author/leandro-lopez.html">Leandro Lopez</a>
                     </address>
@@ -49,5 +72,6 @@
             which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
             </address>
         </footer>
+        <script src="theme/scripts/"></script>
 </body>
 </html>

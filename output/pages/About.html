@@ -12,18 +12,27 @@
 
 <body>
         <header>
-            <hgroup><h1><a href="/">Leo92.net</a></h1></hgroup>
             <div id="masthead">
-                <p>Hi! I'm Leandro Lopez,</p>
+            <hgroup>
+                <h1><a href="/">Leo92.net</a></h1>                <p>Hi! I'm Leandro Lopez,</p>
                 <p>a software developer, artist, </p>
                 <p>and on ocassion I like to write poetry.</p>
                 <p>Really, I'd say I just love creating things.    </p>
+            </hgroup>
+
+            <button id="hamburger-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+            </button>
             </div>
-                <nav>
-                <ul>
-                            <li><a href="/pages/About.html"  aria-current="page" >About Leandro Lopez</a></li>
-                            <li><a href="/category/art.html" >art</a></li>
-                    </ul>
+                <nav id="nav-bar">
+                    <button id="nav-bar__close">X</button>
+                    <ul>
+                                <li><a href="/pages/About.html"  aria-current="page" >About Leandro Lopez</a></li>
+                                <li><a href="/category/art.html" >art</a></li>
+                                <li><a href="/category/code.html" >code</a></li>
+                        </ul>
                 </nav>
         </header>
         
@@ -47,5 +56,6 @@ He loves his wife and his Border Collie, Fly.</p>
             which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
             </address>
         </footer>
+        <script src="theme/scripts/"></script>
 </body>
 </html>
