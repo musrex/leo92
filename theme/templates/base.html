@@ -39,26 +39,35 @@
 
 <body>
         <header>
-            <hgroup><h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>{% if SITESUBTITLE %}<p>{{ SITESUBTITLE }}</p>{% endif %}</hgroup>
             <div id="masthead">
+            <hgroup>
+                <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>{% if SITESUBTITLE %}<p>{{ SITESUBTITLE }}</p>{% endif %}
                 <p>Hi! I'm Leandro Lopez,</p>
                 <p>a software developer, artist, </p>
                 <p>and on ocassion I like to write poetry.</p>
                 <p>Really, I'd say I just love creating things.    </p>
+            </hgroup>
+
+            <button id="hamburger-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+            </button>
             </div>
-                <nav>
-                <ul>
-                    {% if DISPLAY_PAGES_ON_MENU %}
-                        {% for p in pages %}
-                            <li><a href="{{ SITEURL }}/{{ p.url }}" {% if p==page %} aria-current="page" {% endif %}>{{ p.title }}</a></li>
-                        {% endfor %}
-                    {% endif %}
-                    {% if DISPLAY_CATEGORIES_ON_MENU %}
-                        {% for cat, null in categories %}
-                            <li><a href="{{ SITEURL }}/{{ cat.url }}" {% if cat==category %} aria-current="page" {% endif %}>{{ cat}}</a></li>
-                        {% endfor %}
-                    {% endif %}
-                    </ul>
+                <nav id="nav-bar">
+                    <button id="nav-bar__close">X</button>
+                    <ul>
+                        {% if DISPLAY_PAGES_ON_MENU %}
+                            {% for p in pages %}
+                                <li><a href="{{ SITEURL }}/{{ p.url }}" {% if p==page %} aria-current="page" {% endif %}>{{ p.title }}</a></li>
+                            {% endfor %}
+                        {% endif %}
+                        {% if DISPLAY_CATEGORIES_ON_MENU %}
+                            {% for cat, null in categories %}
+                                <li><a href="{{ SITEURL }}/{{ cat.url }}" {% if cat==category %} aria-current="page" {% endif %}>{{ cat}}</a></li>
+                            {% endfor %}
+                        {% endif %}
+                        </ul>
                 </nav>
         </header>
         
@@ -73,5 +82,6 @@
             which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
             </address>
         </footer>
+        <script src="theme/scripts/"></script>
 </body>
 </html>
