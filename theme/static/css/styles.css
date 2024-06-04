@@ -25,13 +25,12 @@ body {
 }
 
 header, main, footer {
-    width: 100%;
+    width: 90%;
+    margin: auto;
 }
 
-main {margin-left: 16px;}
-header {margin-left: 16px;}
-footer {margin-left: 16px;}
-article {max-width: 90%}
+
+
 
 h1 a, h2 a, h3 a {text-decoration: none;}
 
@@ -45,27 +44,52 @@ a {
 }
 
 img {
-    display: block;
-    max-width: 100vw;
-    margin-left: -8px;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 /************************
- *    Masthead Styles    *
+ *    Masthead Styles   *
  * ---------------------*
  * Styling the masthead *
  * in base.html         *
  ************************/
 
-header > hgroup > h1{
-    margin-bottom: 5px;
-}
+header > hgroup > h1 {margin-bottom: 5px;}
 
-#masthead > p {
+
+#masthead > hgroup > p {
     margin: 0;
 }
 
+#hamburger-menu {
+    max-height: fit-content;
+    background-color: none;
+    border: none;
+}
 
+.bar {
+    display: block;
+    border-radius: 2px;
+    background-color: var(--primary-color);
+    width: 20px;
+    height: 5px;
+    margin: 2px; 
+}
+    
+
+
+
+/*******************
+ *  Index Styles   *
+ *-----------------*
+ * Styling for the *
+ * index.html page *
+ *******************/
 
 
 
