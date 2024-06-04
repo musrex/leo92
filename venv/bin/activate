@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/leandro/Documents/mosca_creative/Clients/0005_Leo92_2024/venv"
+VIRTUAL_ENV="/home/leandro/Documents/mosca_creative/clients/leo92.net/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

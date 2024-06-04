@@ -1,3 +1,7 @@
+/*****************
+ * Global Styles *
+ *****************/
+
 :root {
     --primary-color: #D12E51; /* red */
     --secondary-color: #474350; /* dark grey */
@@ -27,6 +31,7 @@ header, main, footer {
 main {margin-left: 16px;}
 header {margin-left: 16px;}
 footer {margin-left: 16px;}
+article {max-width: 90%}
 
 h1 a, h2 a, h3 a {text-decoration: none;}
 
@@ -45,3 +50,43 @@ img {
     margin-left: -8px;
 }
 
+/************************
+ *    Masthead Styles    *
+ * ---------------------*
+ * Styling the masthead *
+ * in base.html         *
+ ************************/
+
+header > hgroup > h1{
+    margin-bottom: 5px;
+}
+
+#masthead > p {
+    margin: 0;
+}
+
+
+
+
+
+
+
+/**********************
+ *   Article Styles   *
+ * ------------------ *
+ * Styling for the    *
+ * articles template, *
+ * article.html       *
+ **********************/
+
+.post-meta {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 10px; 
+}
+
+.post-meta > p {
+    border-right: 1px solid;
+    padding-right: 10px;
+}

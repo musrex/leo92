@@ -1,4 +1,4 @@
-#!/home/leandro/Documents/mosca_creative/Clients/0005_Leo92_2024/venv/bin/python3
+#!/home/leandro/Documents/mosca_creative/clients/leo92.net/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

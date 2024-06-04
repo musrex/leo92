@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/leandro/Documents/mosca_creative/Clients/0005_Leo92_2024/venv"
+set -gx VIRTUAL_ENV "/home/leandro/Documents/mosca_creative/clients/leo92.net/venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
