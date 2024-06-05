@@ -1,0 +1,2 @@
+pelican[markdown]
+typing_extensions
