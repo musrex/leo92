@@ -1,4 +1,4 @@
-Title: About Leandro Lopez
+Title: About
 Date: 2024-05-31 10:21
 Category: About
 Tags: About

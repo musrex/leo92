@@ -61,27 +61,50 @@ img {
 
 header > hgroup > h1 {margin-bottom: 5px;}
 
+hgroup {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin: 0;
+    padding: 0;
+    max-height: 3.5em;
+}
 
-#masthead > hgroup > p {
+#masthead {
+    padding-bottom: 1em;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+#masthead > p {
     margin: 0;
 }
 
 #hamburger-menu {
-    max-height: fit-content;
-    background-color: none;
+    display: block;
+    position: relative;
+    max-height: 50px;
+    background-color: var(--secondary-color);
     border: none;
+    margin: 0 0 0 auto;
 }
 
 .bar {
     display: block;
-    border-radius: 2px;
-    background-color: var(--primary-color);
-    width: 20px;
+    border-radius: 3px;
+    background-color: var(--text-color);
+    width: 35px;
     height: 5px;
-    margin: 2px; 
+    margin: 5px; 
 }
-    
 
+#nav-bar {
+    display: block;
+    height: 0%;
+}
+
+#nav-bar__btn-close {
+    display: none;
+}
 
 
 /*******************
