@@ -40,22 +40,23 @@
 <body>
         <header>
             <div id="masthead">
-            <hgroup>
-                <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>{% if SITESUBTITLE %}<p>{{ SITESUBTITLE }}</p>{% endif %}
+                <hgroup>
+                    <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
+                    <button id="hamburger-menu">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </button>
+                </hgroup>
+                {% if SITESUBTITLE %}
+                    <p>{{ SITESUBTITLE }}</p>
+                {% endif %}
                 <p>Hi! I'm Leandro Lopez,</p>
-                <p>a software developer, artist, </p>
-                <p>and on ocassion I like to write poetry.</p>
-                <p>Really, I'd say I just love creating things.    </p>
-            </hgroup>
-
-            <button id="hamburger-menu">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-            </button>
+                <p>a <strong>software developer, artist,</strong> </p>
+                <p>and on ocassion I like to write <strong>poetry.</strong></p>
             </div>
                 <nav id="nav-bar">
-                    <button id="nav-bar__close">X</button>
+                    <button id="nav-bar__btn-close">X</button>
                     <ul>
                         {% if DISPLAY_PAGES_ON_MENU %}
                             {% for p in pages %}
