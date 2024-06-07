@@ -1,10 +1,12 @@
-addEventListener("DOMContentLoaded", (event) => {
+document.addEventListener("DOMContentLoaded", (event) => {
     
-    let nav = getElementById("nav-bar");
-    let dropDown = getElementById("hamburger-menu");
-    
-    addEventListener(nav, (click) => {
+    const menuBtn = document.getElementById("hamburger-menu");
+    const menuItems = document.querySelectorAll(".menu-item");
 
-    }
+    menuBtn.addEventListener("click", (event) => {
+        menuItems.forEach(item => {
+            item.classList.toggle("active");
+        });
+    });
+});
 
-};
