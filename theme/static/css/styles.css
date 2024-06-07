@@ -9,6 +9,26 @@
     --link-color: #D1B3C4;
 }
 
+.micro5 {
+    font-family: "Micro 5", sans-serif;
+}
+
+.silkscreen {
+    font-family: "Silkscreen", sans-serif;
+}
+
+.jac-bastarda {
+    font-family: "Jacquarda Bastarda 9", serif;
+}
+
+.jac12 {
+    font-family: "Jacquard 12", system-ui;
+}
+
+.pixelify {
+    font-family: "Pixelify Sans", sans-serif;
+}
+
 html, body {
     font-family: "Arial", "Helvetica", sans-serif;
     height: 100%;
@@ -28,7 +48,6 @@ header, main, footer {
     width: 90%;
 }
 
-h1 a, h2 a, h3 a {text-decoration: none;}
 
 p {
     color: var(--text-color);
@@ -36,7 +55,7 @@ p {
 
 a {
     color: var(--text-color);
-    text-decoration: var(--link-color) wavy underline;
+    text-decoration: var(--link-color) dashed underline;
 }
 
 img {
@@ -54,6 +73,9 @@ img {
  * Styling the masthead *
  * in base.html         *
  ************************/
+#logo {
+    color: var(--primary-color);
+}
 
 header > hgroup > h1 {margin-bottom: 5px;}
 
@@ -64,6 +86,12 @@ hgroup {
     margin: 0;
     padding: 0;
     max-height: 3.5em;
+}
+
+
+#nav-bar {
+    margin: auto;
+    width: fit-content;
 }
 
 #masthead {
@@ -93,21 +121,27 @@ hgroup {
     margin: 5px; 
 }
 
+.menu-item a {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 3px;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    margin: .5em auto 0;
+    width: 4em;
+}
+
 .menu-item {
-    display: block;
+    display: inline-block;
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.5s ease-out;
     text-align: center;
-    margin: 1em;
-    border: 1px solid var(--primary-color);
-    border-top: none;
 }
 
 .active {
     max-height: 100px;
-    border: 1px solid var(--primary-color);
-    border-top: none;
 }
 
 #nav-bar__btn-close {
@@ -134,6 +168,15 @@ hgroup {
  * article.html       *
  **********************/
 
+article h2 {
+    margin-bottom: 0;
+}
+
+.article-card {
+    padding-bottom: 1em;
+    border-bottom: 2px solid var(--primary-color);
+}
+
 .post-meta {
     display: flex;
     flex-direction: row;
@@ -144,4 +187,53 @@ hgroup {
 .post-meta > p {
     border-right: 1px solid;
     padding-right: 10px;
+}
+
+/********************
+ *  Footer Styles   *
+ * ---------------- *
+ * Styling for the  *
+ * footer, colophon *
+ ********************/
+
+footer {
+    margin: 2em auto;
+
+}
+#colophon a{
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+#colophon {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-style: double;
+    text-align: center; 
+    padding: 1em;
+    margin: 2em auto;
+}
+
+@media (min-width: 600px) {
+    header, main, footer {
+        max-width: 60%;
+    }
+
+    img {
+        max-width: 100%;
+        margin: auto;
+        left: 0;
+        right: 0;
+    }
+
+    #hamburger-menu {
+        display: none;
+    }
+    
+    .menu-item {
+        max-height: 100px;
+    }
+
+    #nav-bar {
+        margin: 0;
 }
