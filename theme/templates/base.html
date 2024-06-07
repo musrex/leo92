@@ -6,7 +6,7 @@
         <meta charset="utf-8" />
         <meta name="generator" content="Pelican" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="/theme/css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/styles.css" />
         {% if SITESUBTITLE %}
         <meta name="description" content="{{ SITESUBTITLE }}" />
         {% endif %}
@@ -55,20 +55,19 @@
                 <p>a <strong>software developer, artist,</strong> </p>
                 <p>and on ocassion I like to write <strong>poetry.</strong></p>
             </div>
-                <nav id="nav-bar">
+                <nav id="nav-bar" role="navigation">
                     <button id="nav-bar__btn-close">X</button>
-                    <ul>
+                    
                         {% if DISPLAY_PAGES_ON_MENU %}
                             {% for p in pages %}
-                                <li><a href="{{ SITEURL }}/{{ p.url }}" {% if p==page %} aria-current="page" {% endif %}>{{ p.title }}</a></li>
+                                <span class="menu-item"><a href="{{ SITEURL }}/{{ p.url }}" {% if p==page %} aria-current="page" {% endif %}>{{ p.title }}</a></span>
                             {% endfor %}
                         {% endif %}
                         {% if DISPLAY_CATEGORIES_ON_MENU %}
                             {% for cat, null in categories %}
-                                <li><a href="{{ SITEURL }}/{{ cat.url }}" {% if cat==category %} aria-current="page" {% endif %}>{{ cat}}</a></li>
+                                <span class="menu-item"><a href="{{ SITEURL }}/{{ cat.url }}" {% if cat==category %} aria-current="page" {% endif %}>{{ cat}}</a></span>
                             {% endfor %}
                         {% endif %}
-                        </ul>
                 </nav>
         </header>
         
@@ -83,6 +82,6 @@
             which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
             </address>
         </footer>
-        <script src="theme/scripts/"></script>
+        <script src="{{ SITEURL }}/theme/js/scripts.js"></script>
 </body>
 </html>
