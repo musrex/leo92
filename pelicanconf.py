@@ -1,6 +1,6 @@
 AUTHOR = 'Leandro Lopez'
 SITENAME = 'Leo92.net'
-SITEURL = 'https://musrex.github.io/leo92/'
+SITEURL = 'https://musrex.github.io/leo92'
 
 PATH = 'content'
 
