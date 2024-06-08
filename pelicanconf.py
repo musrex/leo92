@@ -6,9 +6,9 @@ PATH = 'content'
 
 THEME = 'theme'
 
-OUTPUT_PATH = './'
+OUTPUT_PATH = 'output/'
 
-STATIC_PATHS = ['theme/static/']
+STATIC_PATHS = ['theme/static/', 'images']
 
 TIMEZONE = 'America/New_York'
 
