@@ -6,7 +6,7 @@ PATH = 'content'
 
 THEME = 'theme'
 
-OUTPUT_PATH = 'output/'
+OUTPUT_PATH = 'docs/'
 
 STATIC_PATHS = ['theme/static/', 'images']
 

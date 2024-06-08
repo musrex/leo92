@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <title>Leo92.net - CSS Full Width Image</title>
+        <meta charset="utf-8" />
+        <meta name="generator" content="Pelican" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="https://musrex.github.io/leo92/theme/css/styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jacquard+12&family=Jacquarda+Bastarda+9&family=Micro+5&family=Pixelify+Sans:wght@400..700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+
+
+
+
+
+        <meta name="tags" content="CSS" />
+        <meta name="tags" content="full-width image" />
+        <meta name="tags" content="code" />
+
+</head>
+
+<body>
+        <header>
+            <div id="masthead">
+                <hgroup>
+                    <h1><a id="logo" href="https://musrex.github.io/leo92/">Leo92.net</a></h1>
+                    <button id="hamburger-menu">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </button>
+                </hgroup>
+                <p>Hi! I'm Leandro Lopez,</p>
+                <p>a <strong>software developer, artist,</strong> </p>
+                <p>and on ocassion I like to write <strong>poetry.</strong></p>
+            </div>
+                <nav id="nav-bar" role="navigation">
+                    <button id="nav-bar__btn-close">X</button>
+                    
+                                <span class="menu-item"><a href="https://musrex.github.io/leo92/pages/About.html" >About</a></span>
+                                <span class="menu-item"><a href="https://musrex.github.io/leo92/category/art.html" >Art</a></span>
+                                <span class="menu-item"><a href="https://musrex.github.io/leo92/category/code.html"  aria-current="page" >Code</a></span>
+                                <span class="menu-item"><a href="https://musrex.github.io/leo92/category/poetry.html" >Poetry</a></span>
+                </nav>
+        </header>
+        
+        <main>
+    <article>
+        <h2>
+            <a href="https://musrex.github.io/leo92/css-full-width-image.html" rel="bookmark"
+            title="Permalink to CSS Full Width Image">CSS Full Width Image</a>
+        </h2>
+        
+        <div class="post-meta">
+                <p>
+                    <time datetime="2010-06-04T11:41:00-04:00">
+                    Fri 04 June 2010
+                    </time>
+                </p>
+    
+                <address>
+                        <a href="https://musrex.github.io/leo92/author/leandro-lopez.html">Leandro Lopez</a>
+                </address>
+        </div>
+    
+        <p>The point of this blog is to log my developer journey - what I'm learning, 
+the struggles I encounter, the surprises I encounter. It shouldn't come as 
+a suprise then, that during the development of this blog I ran into a few 
+frustrations.  </p>
+<p>On of the things that I knew, stylistically, that I wanted was a full width image 
+inside of a limited width parent. This is because I wanted nice margins for
+legibility, and wide images for aesthetics.</p>
+<p>My first instinct (and I'll admit, one reinforced by ChatGPT) was to do something 
+like this:  </p>
+<div class="highlight"><pre><span></span><code><span class="nt">header</span><span class="o">,</span><span class="w"> </span><span class="nt">main</span><span class="o">,</span><span class="w"> </span><span class="nt">footer</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+<span class="w">    </span><span class="k">margin-left</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">img</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">block</span><span class="p">;</span>
+<span class="w">    </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">vw</span><span class="p">;</span>
+<span class="w">    </span><span class="k">margin-left</span><span class="p">:</span><span class="w"> </span><span class="mi">-8</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>However, that gave me less than desirable results. At the screen width I was testing 
+on, which was some Android mobile device simulated by Firefox, it gave me that weird
+margin at the far right edge of the screen - that extra, empty scroll area some websites
+have.  </p>
+<p>One I tested on other devices, especially apple devices, the results were even worse. 
+To have made it work, I would have had to use a bunch of media queries. While there is 
+nothing wrong with media queries, it does seem like overcomplicating what seems like a 
+simple need.  </p>
+<p>Frustrated that a) the solution wasn't as simple as I thought it would be and b) I had 
+been mislead by ChatGPT, I did the most sensible thing - <a href="https://css-tricks.com/full-width-containers-limited-width-parents/">CSS-Tricks</a>!  </p>
+<p>There were two solutions from CSS-Tricks that I liked. The first indicated that I wasn't 
+too far off with my initial try.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">header</span><span class="o">,</span><span class="w"> </span><span class="nt">main</span><span class="o">,</span><span class="w"> </span><span class="nt">footer</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">90</span><span class="kt">%</span><span class="p">;</span>
+<span class="w">    </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="nt">img</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">margin-left</span><span class="p">:</span><span class="w"> </span><span class="mi">-5</span><span class="kt">%</span><span class="p">;</span>
+<span class="w">    </span><span class="k">margin-right</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">%</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>The image I was testing with, however, was pretty giant so that wouldn't work with mine. 
+I know that it's important to upload web optimized images, and that includes resizing them 
+so they're not massive. However, I do want to upload my art to this blog, and some of the 
+art might be larger than 412 pixels wide. I want a nice solution, that on a larger screen 
+would allow guests to see the artwork full sized.  </p>
+<p>CSS-Tricks also had this great solution by <a href="https://codepen.io/maddesigns/pen/rOMgpQ/">Sven Wolfermann</a>:  </p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">full-width</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">vw</span><span class="p">;</span>
+<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">relative</span><span class="p">;</span>
+<span class="w">  </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+<span class="w">  </span><span class="k">right</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin-left</span><span class="p">:</span><span class="w"> </span><span class="mi">-50</span><span class="kt">vw</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin-right</span><span class="p">:</span><span class="w"> </span><span class="mi">-50</span><span class="kt">vw</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>I ended up sticking with Sven's solution. It seems straightforward and flexible, as it doesn't 
+require knowing and calculating the parent containers width. It does, however, require that the 
+parent element is centered. Here is what Chris Coyier from CSS-Tricks had to say about it:  </p>
+<blockquote>
+<p>The idea here is: push the container to the exact middle of the browser window with left: 50%;, then pull it back to the left edge with negative -50vw margin.</p>
+</blockquote>
+<p>CSS-Tricks has a few more solutions, and goes more in-depth than I could so make sure to visit them 
+and read their <a href="https://css-tricks.com/full-width-containers-limited-width-parents/">article</a>!</p>
+        
+        <p>
+            Tags:
+                <a class="tag" href="https://musrex.github.io/leo92/tag/css.html">CSS</a>
+                <a class="tag" href="https://musrex.github.io/leo92/tag/full-width-image.html">full-width image</a>
+                <a class="tag" href="https://musrex.github.io/leo92/tag/code.html">code</a>
+        </p>
+    </article>
+        </main>
+    
+        <footer>
+            <address id="colophon">
+            Leo92.net is powered by <a rel="nofollow" href="https://getpelican.com/">Pelican</a>, a Static Site Generator (SSG) written in <a rel="nofollow" href="https://www.python.org/">Python</a>.
+            The editor of choice used to develop the website was NeoVim with Tmux. 
+            It was developed on a machine running Linux Mint.
+            </address>
+        </footer>
+        <script src="https://musrex.github.io/leo92/theme/js/scripts.js"></script>
+</body>
+</html>
