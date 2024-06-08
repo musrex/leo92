@@ -6,6 +6,8 @@ PATH = 'content'
 
 THEME = 'theme'
 
+OUTPUT_PATH = './'
+
 STATIC_PATHS = ['theme/static/']
 
 TIMEZONE = 'America/New_York'
