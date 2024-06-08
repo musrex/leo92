@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 OUTPUT_DIR="output"
-GITHUB_REPO=""
-BRANCH="main"
+GITHUB_REPO="git@github.com:musrex/leo92.git"
+BRANCH="gh-pages"
 
 pelican content -s publishconf.py1
 
