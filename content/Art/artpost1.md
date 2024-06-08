@@ -5,4 +5,4 @@ Slug: teacher-grading-painting
 Authors: Leandro Lopez
 
 
-![Painting of a teacher grading on a laptop. She's laying on her belly, on a bed](docs/images/cordeliagrading.png)
+![Painting of a teacher grading on a laptop. She's laying on her belly, on a bed](images/cordeliagrading.png)
