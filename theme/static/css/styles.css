@@ -55,7 +55,7 @@ p {
 
 a {
     color: var(--text-color);
-    text-decoration: var(--link-color) dashed underline;
+    text-decoration: var(--link-color) dotted underline;
 }
 
 img {
