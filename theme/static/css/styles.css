@@ -3,9 +3,9 @@
  *****************/
 
 :root {
-    --primary-color: #BA3F1D; /* Davy's Gray - dark grey, text & logo color */
+    --primary-color: #BA3F1D; /* Rust - red color */
     --secondary-color: #D7CDCC; /* Timberwolf - background color */
-    --text-color: #474350; /* Rust - red color */
+    --text-color: #474350; /* Davy's Gray - dark grey, text & logo color */
     --link-color: #4B88A2; /* Air Force Blue - light blue, link color */ 
 }
 
