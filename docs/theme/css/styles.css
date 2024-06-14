@@ -3,10 +3,10 @@
  *****************/
 
 :root {
-    --primary-color: #D12E51; /* red */
-    --secondary-color: #474350; /* dark grey */
-    --text-color: #F7D1CD;
-    --link-color: #D1B3C4;
+    --primary-color: #474350; /* Davy's Gray - dark grey, text & logo color */
+    --secondary-color: #d7cdcc; /* Timberwolf - background color */
+    --text-color: #ba3f1d; /* Rust - red color */
+    --link-color: #4B88A2; /* Air Force Blue - light blue, link color */ 
 }
 
 .micro5 {
